@@ -1,17 +1,17 @@
 package org.example;
 
 class Lang {
-    private Long id;
+    private Integer id;
     private String welcomeMsg;
     private String code;
 
-    public Lang(Long id, String welcomeMsg, String code) {
+    public Lang(Integer id, String welcomeMsg, String code) {
         this.id = id;
         this.welcomeMsg = welcomeMsg;
         this.code = code;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
