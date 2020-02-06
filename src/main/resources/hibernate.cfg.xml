@@ -31,7 +31,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">validate</property>
 
-        <mapping class="org.example.Lang"/>
+        <mapping class="org.example.lang.Lang"/>
 
     </session-factory>
 

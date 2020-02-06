@@ -1,5 +1,7 @@
-package org.example;
+package org.example.hello;
 
+import org.example.lang.Lang;
+import org.example.lang.LangRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
