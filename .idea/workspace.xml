@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c88bf9b-7574-4214-b5f6-94389f657d7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/lang/LangDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/lang/LangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/todos/Todos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/todos/TodosRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/todos/TodosServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_todo_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V4__Add_todo.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lang/LangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lang/LangServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hello/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/hello/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hello/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/hello/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/lang/LangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/lang/LangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/hello/HelloServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/hello/HelloServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +169,8 @@
       <workItem from="1580810072251" duration="11024000" />
       <workItem from="1580829750103" duration="9420000" />
       <workItem from="1580985150442" duration="9820000" />
-      <workItem from="1581066367315" duration="716000" />
+      <workItem from="1581066367315" duration="11241000" />
+      <workItem from="1581079105623" duration="2475000" />
     </task>
     <task id="LOCAL-00001" summary="Add data base H2, and fix pl message">
       <created>1580821579161</created>
@@ -185,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580991926439</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor index.html , new view.">
+      <created>1581067154736</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581067154736</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +223,8 @@
     <MESSAGE value="Add data base H2, and fix pl message" />
     <MESSAGE value="add Hibernate with session.&#10;add new languages on db." />
     <MESSAGE value="Refactoring code, add sript js." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring code, add sript js." />
+    <MESSAGE value="Refactor index.html , new view." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor index.html , new view." />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="89" key="#Inspections" timestamp="1580643792985">
@@ -231,10 +247,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="559" y="233" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580814698253" />
-    <state x="605" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1580993776687">
+    <state x="605" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1581080099360">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580993776687" />
+    <state x="605" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581080099360" />
     <state x="596" y="290" width="407" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580991781870">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -243,30 +259,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="177" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580821039116" />
-    <state x="425" y="25" key="CommitChangelistDialog2" timestamp="1580991924989">
+    <state x="425" y="25" key="CommitChangelistDialog2" timestamp="1581067153343">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="25" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580991924989" />
+    <state x="425" y="25" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581067153343" />
     <state x="579" y="185" key="FileChooserDialogImpl" timestamp="1580477855187">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="579" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580477855187" />
-    <state width="1557" height="143" key="GridCell.Tab.0.bottom" timestamp="1580995235985">
+    <state width="1557" height="143" key="GridCell.Tab.0.bottom" timestamp="1581078915736">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580995235985" />
-    <state width="1557" height="143" key="GridCell.Tab.0.center" timestamp="1580995235985">
+    <state width="1557" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581078915736" />
+    <state width="1557" height="143" key="GridCell.Tab.0.center" timestamp="1581078915736">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580995235985" />
-    <state width="1557" height="143" key="GridCell.Tab.0.left" timestamp="1580995235985">
+    <state width="1557" height="143" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581078915736" />
+    <state width="1557" height="143" key="GridCell.Tab.0.left" timestamp="1581078915736">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580995235985" />
-    <state width="1557" height="143" key="GridCell.Tab.0.right" timestamp="1580995235985">
+    <state width="1557" height="143" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581078915736" />
+    <state width="1557" height="143" key="GridCell.Tab.0.right" timestamp="1581078915736">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580995235985" />
+    <state width="1557" height="143" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581078915736" />
     <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1580656216928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -295,14 +311,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580641484920" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1580991941809">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1581067166258">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580991941809" />
-    <state x="495" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1581066366402">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581067166258" />
+    <state x="495" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1581079108989">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="495" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581066366402" />
+    <state x="495" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581079108989" />
     <state x="530" y="186" width="540" height="497" key="extract.method.dialog" timestamp="1580744299181">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -315,10 +331,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="126" key="new project wizard/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580477743216" />
-    <state x="506" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1580991495524">
+    <state x="506" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1581072124936">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="506" y="49" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1580991495524" />
+    <state x="506" y="49" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1581072124936" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1580813375985">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
